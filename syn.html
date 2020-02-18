@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>synchronous</title>
+</head>
+<body>
+
+</body>
+<script>
+	function Third(str){
+		return str+"kanna.";
+	}
+
+	function Second(){
+		return Third("suresh")
+	}
+	function First(){
+		var name=Second();
+		console.log("My name is" +name);
+	}
+	First();
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wap validate mobile</title>
+</head>
+<body>
+  <form name="myform" onsubmit="return validateform()">
+    
+   phone number:<input type="text" id="phone"><br>
+  </form>
+   
+</body>
+
+<script>
+  function validateform(){
+    return checkphone();
+  }
+  function checkphone(){
+    var phone=document.forms["myform"]["phone"].value;
+    var phonenumber=/^\(?[0to9]{9})\)?[-.]?([0to9]){8})[-.]?([0-9]{7}$/);
+    if(phone.value.match(phonenumber)){
+      return true;
+    }
+    else
+    {
+      document.getElementById("phone").className= document.getElementById("phone").className+"error";
+      return false;
+    }
+  }
+
+
+
+</script>
+</html>
